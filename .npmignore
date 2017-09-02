@@ -1,0 +1,8 @@
+.babelrc
+.editorconfig
+.eslintignore
+.eslintrc
+.gitignore
+rollup.config.js
+yarn.lock
+src/index.test.js
