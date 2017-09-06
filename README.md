@@ -1,6 +1,9 @@
 redux-batch-actions-enhancer
 ============================
 
+![build status](https://travis-ci.org/laysent/redux-batch-actions-enhancer.svg)
+[![Coverage Status](https://coveralls.io/repos/github/laysent/redux-batch-actions-enhancer/badge.svg?branch=master)](https://coveralls.io/github/laysent/redux-batch-actions-enhancer?branch=master)
+
 Store enhancer for [redux](https://github.com/reactjs/redux), which allows single trigger of
 subscriptions after a bunch of actions.
 

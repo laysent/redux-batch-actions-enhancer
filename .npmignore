@@ -6,3 +6,5 @@
 rollup.config.js
 yarn.lock
 src/index.test.js
+coverage/
+.travis.yml
