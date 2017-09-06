@@ -1,5 +1,5 @@
 import { createStore, compose, applyMiddleware } from 'redux';
-import { createAction, batch } from '.';
+import { createAction, batch, type } from '.';
 
 describe('Redux.Batch', () => {
   let store;
@@ -232,5 +232,28 @@ describe('Redux.Batch', () => {
     store.dispatch(batchAction);
 
     expect(subscription).toHaveBeenCalledTimes(1);
+  });
+  it('should create empty list of actions if provided nothing', () => {
+    // this is to prevent reducer to throw error, as action must be plan object
+    const empty = createAction();
+
+    expect(empty).toEqual({
+      type,
+      payload: [],
+    });
+  });
+  it('should not create batch action if there is only one', () => {
+    // if there is only one action, batch action seems unnecessary
+    const batchAction = createAction(action);
+
+    expect(batchAction).toBe(action);
+  });
+  it('should create batch action', () => {
+    const batchAction = createAction(action, action);
+
+    expect(batchAction).toEqual({
+      type,
+      payload: [action, action],
+    });
   });
 });

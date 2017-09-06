@@ -1,11 +1,30 @@
 {
   "name": "redux-batch-actions-enhancer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "redux enhancer to handle batched actions and reduce the calls of subscribers",
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
-  "author": "LaySent",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laysent/redux-batch-actions-enhancer.git"
+  },
+  "author": {
+    "name": "LaySent",
+    "email": "laysent@hotmail.com",
+    "url": "https://github.com/laysent"
+  },
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/laysent/redux-batch-actions-enhancer/issues"
+  },
+  "homepage": "https://github.com/laysent/redux-batch-actions-enhancer#readme",
+  "keywords": [
+    "redux",
+    "redux-enhancer",
+    "enhancer",
+    "middleware",
+    "batch-actions"
+  ],
   "devDependencies": {
     "@types/jest": "^20.0.8",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",

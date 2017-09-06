@@ -1,9 +1,12 @@
 export const type = '@@type/batch';
 
-export const createAction = (...actions) => ({
-  type,
-  payload: actions,
-});
+export const createAction = (...actions) => {
+  if (actions.length === 1) return actions[0];
+  return {
+    type,
+    payload: actions,
+  };
+};
 
 const isBatchAction = action => action && action.type === type;
 
